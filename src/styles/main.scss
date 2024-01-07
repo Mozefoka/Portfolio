@@ -1,0 +1,74 @@
+@use "variables";
+@use "fonts";
+@use "typography";
+@use "reset";
+
+* {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size: 16px;
+	font-family: "Raleway", sans-serif;
+	color: #fff;
+	background-color: #252934;
+
+	@media (max-width: 768px) {
+		font-size: 14px;
+	}
+}
+
+a {
+	display: block;
+	color: #fff;
+	transition: all 0.5s ease;
+
+	&:hover {
+		color: yellow;
+	}
+}
+
+img {
+	width: 100%;
+}
+
+span {
+	color: yellow;
+}
+
+.container {
+	max-width: 1230px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.logo {
+	width: 50px;
+	transition: all 0.5s ease;
+
+	&:hover {
+		opacity: 0.7;
+	}
+}
+
+.title {
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+
+	@media (max-width: 768px) {
+		font-size: 30px;
+	}
+}
+
+.title-line {
+	width: 100px;
+	height: 3px;
+	margin: 25px auto 100px;
+	background-color: #fff;
+	background-color: yellow;
+
+	@media (max-width: 768px) {
+		width: 80px;
+	}
+}

@@ -1,0 +1,41 @@
+.projects {
+	padding-bottom: 130px;
+
+	&__title {
+		scroll-margin-top: 170px
+	}
+
+	&__inner {
+		display: flex;
+		gap: 20px;
+		margin: 0 auto;
+		text-align: center;
+		max-width: 835px;
+
+		@media (max-width: 500px) {
+			flex-direction: column;
+		}
+	}
+
+	&__site {
+		border: solid 10px #1b242f;
+	}
+
+	&__button {
+		padding: 10px 0;
+		border-top: solid 10px #1b242f;
+
+		&::after {
+			content: "";
+			padding-left: 30px;
+			background-image: url("/src/assets/images/Icons/url.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: 10px -1px;
+		}
+
+		&:hover:after {
+			background-size: 19px;
+		}
+	}
+}
