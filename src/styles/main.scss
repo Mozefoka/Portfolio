@@ -1,0 +1,348 @@
+@use 'reset';
+@use 'fonts';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  background-color: #000;
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding-inline: 10px;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px);
+  z-index: 5;
+
+  &__inner {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo-img {
+    width: 75px;
+    
+      @media (max-width: 992px) {
+        width: 60px;
+      }
+
+      @media (max-width: 768px) {
+        width: 50px;
+      }
+  }
+
+  &__nav-list {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-size: clamp(13px, 2vw, 16px);
+    font-weight: 500;
+    text-transform: uppercase;
+
+    li:first-child {
+      color: #bf4747;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__nav-list-item {
+    transition: .3s ease all;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+}
+
+.about-me {
+  position: relative;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 50px;
+  background: url("@/assets/images/ocean.webp") no-repeat center/cover fixed;
+
+  span {
+    color: #bf4747;
+  }
+
+  &__inner {
+    width: 50%;
+    padding: 0 10px;
+
+    @media (max-width: 768px) {
+      width: 65%;
+    }
+
+    @media (max-width: 590px) {
+      width: 75%;
+    }
+
+    @media (max-width: 465px) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-family: "Stack Sans Notch", sans-serif;
+    font-size: clamp(3rem, 11vw, 8rem);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  &__description {
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    line-height: clamp(1.5rem, 2.2vw, 2.5rem);
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 10px;
+  }
+}
+
+.skills {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__inner {
+    margin-top: 50px;
+  }
+
+  &__inner-line {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+
+    @media (max-width: 1100px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__card {
+    max-width: 350px;
+    min-height: 333px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.13);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 10px;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.4), transparent 70%);
+      border-radius: 15px;
+    }
+
+    @media (max-width: 768px) {
+      max-width: 555px;
+      width: 100%;
+    }
+  }
+
+  &__card-icon {
+    height: 100px;
+    flex-grow: .7;
+  }
+
+  &__card-icon-img {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+  }
+
+  &__card-title {
+    font-size: clamp(1rem, 1.2vw, 1.5rem);
+    font-weight: 600;
+    font-family: "Stack Sans Notch", sans-serif;
+    color: #bf4747;
+    margin-bottom: 15px;
+    text-align: center;
+    
+      @media (max-width: 1100px) {
+        font-size: 1.6rem;
+      }
+
+    @media (max-width: 768px) {
+      font-size: clamp(1.4rem, 5vw, 1.8rem);
+    }
+  }
+
+  &__card-description {
+    min-height: 73px;
+    text-align: center;
+    font-size: clamp(0.8rem, 1vw, 1rem);
+    line-height: clamp(1.2rem, 2vw, 1.5rem);
+
+    @media (max-width: 1100px) {
+      font-size: 1.2rem;
+      line-height: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: clamp(1.2rem, 4vw, 1.4rem);
+    }
+  }
+}
+
+.projects {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url(@/assets/images/memories.jpg) no-repeat center/cover fixed;
+
+  &__glide-card {
+    cursor: pointer;
+
+    &:hover {
+
+      img {
+        transition: .3s ease all;
+        transform: scale(.8);
+      }
+    }
+  }
+
+  &__glide-card-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: .3s ease all;
+
+    @media (max-width: 768px) {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 555px) {
+      width: 95%;
+    }
+  }
+}
+
+.glide {
+
+  &__slide {
+    height: auto !important;
+  }
+
+  &__arrows {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  &__arrows-next {
+    transform: rotate(-180deg);
+  }
+}
+
+.footer {
+  position: relative;
+  padding: 40px 0;
+
+  &__title {
+    font-family: "Stack Sans Notch", sans-serif;
+    font-size: clamp(2rem, 3vw, 4rem);
+    font-weight: 700;
+
+    span {
+      color: #bf4747;
+    }
+  }
+
+  &__contacts {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transition: .3s ease all;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 80px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: #919191;
+    }
+  }
+
+  &__contacts-item {
+    cursor: pointer;
+    transition: .3s ease all;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      width: 50px;
+    }
+  }
+
+  &__number-email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding-top: 10px;
+    color: #bf4747;
+
+    a {
+      transition: .3s ease all;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+}
+
+.up {
+  position: fixed;
+  right: 50px;
+  bottom: 10px;
+  cursor: pointer;
+  z-index: 5;
+  transition: .3s ease all;
+
+  &:hover {
+    opacity: .8;
+  }
+
+  @media (max-width: 768px) {
+    width: 50px;
+    right: 5px;
+  }
+
+  @media (max-width: 555px) {
+    display: none;
+  }
+}
