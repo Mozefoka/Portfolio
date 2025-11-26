@@ -33,21 +33,21 @@ body {
 
   &__logo-img {
     width: 75px;
-    
-      @media (max-width: 992px) {
-        width: 60px;
-      }
 
-      @media (max-width: 768px) {
-        width: 50px;
-      }
+    @media (max-width: 992px) {
+      width: 60px;
+    }
+
+    @media (max-width: 768px) {
+      width: 50px;
+    }
   }
 
   &__nav-list {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     flex-wrap: wrap;
-    font-size: clamp(13px, 2vw, 16px);
+    font-size: clamp(12px, 2vw, 16px);
     font-weight: 500;
     text-transform: uppercase;
 
@@ -63,8 +63,10 @@ body {
   &__nav-list-item {
     transition: .3s ease all;
 
-    &:hover {
-      opacity: .8;
+    @media (hover: hover) {
+      &:hover {
+        opacity: .8;
+      }
     }
   }
 }
@@ -182,10 +184,10 @@ body {
     color: #bf4747;
     margin-bottom: 15px;
     text-align: center;
-    
-      @media (max-width: 1100px) {
-        font-size: 1.6rem;
-      }
+
+    @media (max-width: 1100px) {
+      font-size: 1.6rem;
+    }
 
     @media (max-width: 768px) {
       font-size: clamp(1.4rem, 5vw, 1.8rem);
@@ -219,11 +221,12 @@ body {
   &__glide-card {
     cursor: pointer;
 
-    &:hover {
-
-      img {
-        transition: .3s ease all;
-        transform: scale(.8);
+    @media (hover: hover) {
+      &:hover {
+        img {
+          transition: .3s ease all;
+          transform: scale(.8);
+        }
       }
     }
   }
@@ -298,8 +301,10 @@ body {
     cursor: pointer;
     transition: .3s ease all;
 
-    &:hover {
-      transform: scale(1.1);
+    @media (hover: hover) {
+      &:hover {
+        transform: scale(1.1);
+      }
     }
 
     @media (max-width: 768px) {
@@ -318,8 +323,10 @@ body {
     a {
       transition: .3s ease all;
 
-      &:hover {
-        opacity: .8;
+      @media (hover: hover) {
+        &:hover {
+          opacity: .8;
+        }
       }
     }
   }
@@ -333,8 +340,10 @@ body {
   z-index: 5;
   transition: .3s ease all;
 
-  &:hover {
-    opacity: .8;
+  @media (hover: hover) {
+    &:hover {
+      opacity: .8;
+    }
   }
 
   @media (max-width: 768px) {
