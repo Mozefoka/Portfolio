@@ -13,6 +13,7 @@
     "vite": "^7.2.2"
   },
   "dependencies": {
-    "@glidejs/glide": "^3.7.1"
+    "@glidejs/glide": "^3.7.1",
+    "scss": "^0.2.4"
   }
 }
